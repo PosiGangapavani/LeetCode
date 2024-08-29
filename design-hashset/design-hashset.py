@@ -1,22 +1,21 @@
 class MyHashSet:
 
     def __init__(self):
-        self.hash_set = [False] * (10 ** 6 + 1)
-        
+        self.set1 = set()
 
     def add(self, key: int) -> None:
-        self.hash_set[key] = True
-        
+        self.set1.add(key)
 
     def remove(self, key: int) -> None:
-        self.hash_set[key] = False
+        if key in self.set1:
+            self.set1.remove(key)
         
 
     def contains(self, key: int) -> bool:
-        if self.hash_set[key]:
-            return True 
-        return False
-        
+        if key in self.set1:
+            return True
+        else:
+            return False
         
 
 
