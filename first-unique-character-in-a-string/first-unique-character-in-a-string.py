@@ -6,8 +6,9 @@ class Solution:
                 ans[i] = 1
             else:
                 ans[i] += 1
-        for i in range(len(s)):
-            if ans[s[i]] == 1:
-                return i 
+        for i in ans.keys():
+            if ans[i] == 1:
+                index = s.find(i)
+                return  index
         return -1
         
